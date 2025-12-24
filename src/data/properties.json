@@ -31,5 +31,67 @@
                 "day":14,
                 "year":2022
             }
-        }
+        },
+        {
+      "id": "prop3",
+      "type": "Bungalow",
+      "bedrooms": 3,
+      "price": 420000,
+      "tenure": "Freehold",
+      "location": "Reading",
+      "picture": "images/prop3pic1small.jpg",
+      "url": "properties/prop3.html",
+      "description": "Spacious three bedroom detached bungalow situated in a quiet residential location. The property offers a large living room, fitted kitchen, modern bathroom and private rear garden. Additional features include driveway parking, a garage and convenient access to local shops and schools.",
+      "added": { "month": "March", "day": 18, "year": 2025 }
+    },
+    {
+     "id": "prop4",
+      "type": "House",
+      "bedrooms": 5,
+      "price": 780000,
+      "tenure": "Freehold",
+      "location": "Bromley",
+      "picture": "images/prop4pic1small.jpg",
+      "url": "properties/prop4.html",
+      "description": "Impressive five bedroom detached family home offering generous living accommodation throughout. The property features multiple reception rooms, a modern fitted kitchen, utility room and landscaped garden. The first floor includes five bedrooms with a master en-suite and a family bathroom.",
+      "added": { "month": "June", "day": 9, "year": 2023 }
+    },
+    {
+      "id": "prop5",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 450000,
+      "tenure": "Leasehold",
+      "location": "Canary Wharf, London",
+      "picture": "images/prop5pic1small.jpg",
+      "url": "properties/prop5.html",
+      "description": "Stylish one bedroom apartment located in the heart of Canary Wharf offering river views and excellent transport connections. The property benefits from an open-plan living space, modern kitchen, secure entry system and access to on-site gym facilities.",
+      "added": { "month": "August", "day": 21, "year": 2023 }
+    },
+    {
+      "id": "prop6",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 560000,
+      "tenure": "Freehold",
+      "location": "Greenwich, London",
+      "picture": "images/prop6pic1small.jpg",
+      "url": "properties/prop6.html",
+      "description": "Well presented three bedroom terraced house within walking distance of Greenwich Park and local transport links. The property offers a bright living area, fitted kitchen, family bathroom and a private garden, making it ideal for families and professionals.",
+      "added": { "month": "September", "day": 3, "year": 2023 }
+    },
+
+    {
+      "id": "prop7",
+      "type": "Bungalow",
+      "bedrooms": 2,
+      "price": 390000,
+      "tenure": "Freehold",
+      "location": "Kent",
+      "picture": "images/prop7pic1small.jpg",
+      "url": "properties/prop7.html",
+      "description": "Charming two bedroom bungalow located in a peaceful setting with easy access to nearby towns and countryside. The property features a comfortable living space, fitted kitchen, modern bathroom and a low-maintenance garden, ideal for downsizers.",
+      "added": { "month": "November", "day": 14, "year": 2023 }
+    }
+
 ]}
