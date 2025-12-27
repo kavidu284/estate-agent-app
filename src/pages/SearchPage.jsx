@@ -25,7 +25,7 @@ function SearchPage() {
         <option value={"Any"}>Any</option>
         <option value={"House"}>House</option>
         <option value={"Flat"}>Flat</option>
-        <option value={"Bungalow"}>Bungalow</option>
+
       </select>
       <input
         type="number"
@@ -52,15 +52,18 @@ function SearchPage() {
           <Link to={`/property/${property.id}`}>
             View Details
           </Link>
+
         </div>
       ))}
 
       {filteredProperties.length === 0 && (
         <p>No properties match your search.</p>
       )}
-      
+      <Link to="/favourites">View Favourites</Link>
     </div>
+
   );
 }
+
 
 export default SearchPage;
