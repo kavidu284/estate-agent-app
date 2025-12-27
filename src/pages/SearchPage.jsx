@@ -4,7 +4,7 @@ import data from "../data/properties.json";
 
 
 function SearchPage() {
-  const [searchResults, setSearchResults] = useState(["Any"]);
+  const [searchResults, setSearchResults] = useState("Any");
   const [minBedrooms, setMinBedrooms] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
 
@@ -17,9 +17,10 @@ function SearchPage() {
   });
 
   return (
-    <div>
+    <div className="container">
       <h2>Property Search</h2>
       {/*filter options*/}
+      <div className="filters">
       <select value = {searchResults} onChange={(e) => setSearchResults(e.target.value)}>
         <option value={"Any"}>Any</option>
         <option value={"House"}>House</option>
@@ -37,11 +38,12 @@ function SearchPage() {
         placeholder="Max Price"
         value={maxPrice}
         onChange={(e) => setMaxPrice(e.target.value)}
-      />  
+      /> 
+      </div> 
       <hr />
       {/*search results*/}
       {filteredProperties.map((property) => (
-        <div key={property.id} style={{ marginBottom: "15px" }}>
+        <div key={property.id} className="property-card">
           <h3>{property.type}</h3>
           <p>{property.location}</p>
           <p>Bedrooms: {property.bedrooms}</p>
