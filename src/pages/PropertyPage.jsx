@@ -13,7 +13,7 @@ function PropertyPage({addFavourite}) {
   }
 
   return (
-    <div>
+    <div className="container">
       <h2>{property.type}</h2>
       <p><strong>Location:</strong> {property.location}</p>
       <p><strong>Bedrooms:</strong> {property.bedrooms}</p>

@@ -6,14 +6,24 @@ import data from "../data/properties.json";
 function SearchPage() {
   const [searchResults, setSearchResults] = useState("Any");
   const [minBedrooms, setMinBedrooms] = useState("");
+  const [maxBedrooms, setMaxBedrooms] = useState("");
+  const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [dateAdded, setDateAdded] = useState("");
+  const [poscode , setPostcode] = useState("");
 
   const filteredProperties = data.properties.filter((property) =>{
     const matchesSearch = searchResults ==="Any" || property.type === searchResults;
     const matchesBedrooms = minBedrooms === "" || property.bedrooms >= Number(minBedrooms);
-    const matchesPrice = maxPrice === "" || property.price <= Number(maxPrice);   
+    const matchesmaxBedrooms = maxBedrooms === "" || property.bedrooms <= Number(maxBedrooms);
+    const matchesminPrice = minPrice === "" || property.price >= Number(minPrice);
+    const matchesmaxPrice = maxPrice === "" || property.price <= Number(maxPrice); 
+    const propertyDate = new Date(
+  `${property.added.month} ${property.added.day}, ${property.added.year}`);
+    const matchesDateAdded = dateAdded === "" || propertyDate > new Date(dateAdded); 
+    const matchesPostcode = poscode === "" || property.location.toLowerCase().includes(poscode.toLowerCase());
 
-  return matchesSearch && matchesBedrooms && matchesPrice;
+  return matchesSearch && matchesBedrooms && matchesmaxBedrooms && matchesminPrice && matchesmaxPrice && matchesDateAdded && matchesPostcode;
   });
 
   return (
@@ -35,10 +45,34 @@ function SearchPage() {
       />
       <input
         type="number"
+        placeholder="Max Bedrooms"
+        value={maxBedrooms}
+        onChange={(e) => setMaxBedrooms(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Min Price"
+        value={minPrice}
+        onChange={(e) => setMinPrice(e.target.value)}
+        />
+      <input
+        type="number"
         placeholder="Max Price"
         value={maxPrice}
         onChange={(e) => setMaxPrice(e.target.value)}
       /> 
+      <input
+        type="date"
+        value={dateAdded}
+        onChange={(e) => setDateAdded(e.target.value)}          
+      />
+      <input
+        type="text"
+        placeholder="Postcode (e.g. BR5)"
+        value={poscode}
+        onChange={(e) => setPostcode(e.target.value)}          
+      />
+
       </div> 
       <hr />
       {/*search results*/}
