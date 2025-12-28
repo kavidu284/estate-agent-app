@@ -29,7 +29,7 @@ function PropertyPage({addFavourite}) {
       <p><strong>Bedrooms:</strong> {property.bedrooms}</p>
       <p><strong>Price:</strong> £{property.price.toLocaleString()}</p>
       <p><strong>Tenure:</strong> {property.tenure}</p>
-      <p><strong>Added:</strong> {" "} {property.added.day} {property.added.month} {property.added.year}</p>
+      <br />
 
       {/* TABS */}
       <Tabs>

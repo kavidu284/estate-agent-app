@@ -35,6 +35,25 @@ h3 {
   margin-bottom: 6px;
   color: #2980b9;
 }
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fav-link {
+  text-decoration: none;
+  background-color: #f39c12;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.fav-link:hover {
+  background-color: #d68910;
+}
 
 /* FILTER BAR */
 .filters {
@@ -166,4 +185,54 @@ p {
 
 .remove-favourite-btn:hover {
   background: #5f6a6a;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* TABLET (max-width: 900px) */
+@media (max-width: 900px) {
+
+  .property-card {
+    flex-direction: column;
+  }
+
+  .property-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+}
+
+/* MOBILE (max-width: 600px) */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .property-card {
+    margin-bottom: 15px;
+  }
+
+  .view-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

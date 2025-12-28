@@ -28,7 +28,15 @@ function SearchPage() {
 
   return (
     <div className="container">
-      <h2>Property Search</h2>
+      {/*header*/}
+      <div className="page-header">
+  <h2>Property Search</h2>
+
+  <Link to="/favourites" className="fav-link">
+     View Favourites
+  </Link>
+</div>
+
       {/*filter options*/}
       <div className="filters">
       <select value = {searchResults} onChange={(e) => setSearchResults(e.target.value)}>
@@ -72,7 +80,6 @@ function SearchPage() {
         value={poscode}
         onChange={(e) => setPostcode(e.target.value)}          
       />
-
       </div> 
       <hr />
       {/*search results*/}
@@ -100,7 +107,7 @@ function SearchPage() {
       {filteredProperties.length === 0 && (
         <p>No properties match your search.</p>
       )}
-      <Link to="/favourites">View Favourites</Link>
+      
     </div>
 
   );
