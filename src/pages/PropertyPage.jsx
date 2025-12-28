@@ -30,32 +30,40 @@ function PropertyPage({addFavourite}) {
       <p><strong>Bedrooms:</strong> {property.bedrooms}</p>
       <p><strong>Price:</strong> £{property.price.toLocaleString()}</p>
       <p><strong>Tenure:</strong> {property.tenure}</p>
+      <p><strong>Added:</strong> {property.added.day} {property.added.month} {property.added.year}</p>
       <br />
 
       {/* TABS */}
       <Tabs>
-        <TabList>
-          <Tab>Description</Tab>
-          <Tab>Added</Tab>
-          <Tab>Map</Tab>
-        </TabList>
+  <TabList>
+    <Tab>Description</Tab>
+    <Tab>Floor Plan</Tab>
+    <Tab>Map</Tab>
+  </TabList>
 
-        <TabPanel>
-          <p>{property.description}</p>
-        </TabPanel>
+  <TabPanel>
+    <p>{property.description}</p>
+  </TabPanel>
 
-        <TabPanel>
-          <p>
-            Added on: {property.added.day}{" "}
-            {property.added.month}{" "}
-            {property.added.year}
-          </p>
-        </TabPanel>
+  <TabPanel>
+    <img
+      src={property.floorplan}
+      alt="Floor Plan"
+      style={{ width: "100%" }}
+    />
+  </TabPanel>
 
-        <TabPanel>
-          <p>{property.location}</p>
-        </TabPanel>
-      </Tabs>
+  <TabPanel>
+    <p>{property.location}</p>
+    <iframe
+      title="map"
+      width="100%"
+      height="300"
+      loading="lazy"
+      src={`https://www.google.com/maps?q=${property.location}&output=embed`}
+    ></iframe>
+  </TabPanel>
+</Tabs>
 
       <br />
       
