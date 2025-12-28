@@ -1,5 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import data from "../data/properties.json";
+import { Tabs , TabList , Tab , TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 function PropertyPage({addFavourite}) {
   const { id } = useParams();
@@ -15,17 +17,46 @@ function PropertyPage({addFavourite}) {
   return (
     <div className="container">
       <h2>{property.type}</h2>
+      {/* PROPERTY IMAGE */}
+      <img
+        src={`/${property.picture}`}
+        alt="Property"
+        style={{ width: "100%", marginBottom: "15px" }}
+      />
+
+      {/* BASIC INFO */}
       <p><strong>Location:</strong> {property.location}</p>
       <p><strong>Bedrooms:</strong> {property.bedrooms}</p>
       <p><strong>Price:</strong> £{property.price.toLocaleString()}</p>
       <p><strong>Tenure:</strong> {property.tenure}</p>
-      <p>
-  <strong>Added:</strong>{" "}
-  {property.added.day} {property.added.month} {property.added.year}</p>
+      <p><strong>Added:</strong> {" "} {property.added.day} {property.added.month} {property.added.year}</p>
 
-      <p>{property.description}</p>
+      {/* TABS */}
+      <Tabs>
+        <TabList>
+          <Tab>Description</Tab>
+          <Tab>Added</Tab>
+          <Tab>Map</Tab>
+        </TabList>
 
+        <TabPanel>
+          <p>{property.description}</p>
+        </TabPanel>
 
+        <TabPanel>
+          <p>
+            Added on: {property.added.day}{" "}
+            {property.added.month}{" "}
+            {property.added.year}
+          </p>
+        </TabPanel>
+
+        <TabPanel>
+          <p>{property.location}</p>
+        </TabPanel>
+      </Tabs>
+
+      <br />
       
       
       <button className="add-favourite-btn" onClick={() => addFavourite(property)}>

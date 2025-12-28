@@ -78,6 +78,13 @@ function SearchPage() {
       {/*search results*/}
       {filteredProperties.map((property) => (
         <div key={property.id} className="property-card">
+
+          <img
+            src={`/${property.picture}`}
+            alt="Property"
+            className="property-image"
+          />
+
           <h3>{property.type}</h3>
           <p>{property.location}</p>
           <p>Bedrooms: {property.bedrooms}</p>
