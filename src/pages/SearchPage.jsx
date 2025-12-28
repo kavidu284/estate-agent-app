@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link }  from "react-router-dom";
+import { Link } from "react-router-dom";
 import data from "../data/properties.json";
 
 
@@ -10,7 +10,7 @@ function SearchPage() {
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [dateAdded, setDateAdded] = useState("");
-  const [poscode , setPostcode] = useState("");
+  const [postcode, setPostcode] = useState("");
 
   const filteredProperties = data.properties.filter((property) =>{
     const matchesSearch = searchResults ==="Any" || property.type === searchResults;
@@ -20,8 +20,8 @@ function SearchPage() {
     const matchesmaxPrice = maxPrice === "" || property.price <= Number(maxPrice); 
     const propertyDate = new Date(
   `${property.added.month} ${property.added.day}, ${property.added.year}`);
-    const matchesDateAdded = dateAdded === "" || propertyDate > new Date(dateAdded); 
-    const matchesPostcode = poscode === "" || property.location.toLowerCase().includes(poscode.toLowerCase());
+    const matchesDateAdded = dateAdded === "" || propertyDate >= new Date(dateAdded); 
+    const matchesPostcode = postcode === "" || property.location.toLowerCase().includes(postcode.toLowerCase());
 
   return matchesSearch && matchesBedrooms && matchesmaxBedrooms && matchesminPrice && matchesmaxPrice && matchesDateAdded && matchesPostcode;
   });
@@ -77,7 +77,7 @@ function SearchPage() {
       <input
         type="text"
         placeholder="Postcode (e.g. BR5)"
-        value={poscode}
+        value={postcode}
         onChange={(e) => setPostcode(e.target.value)}          
       />
       </div> 
@@ -87,7 +87,7 @@ function SearchPage() {
         <div key={property.id} className="property-card">
 
           <img
-            src={`/${property.picture}`}
+            src={property.picture}
             alt="Property"
             className="property-image"
           />

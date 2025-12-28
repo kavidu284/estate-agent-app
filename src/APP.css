@@ -136,6 +136,16 @@ a:hover {
 p {
   margin-bottom: 12px;
 }
+/* Property image (details page) */
+.property-image-2 {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+
 
 /* Add to favourites button (details page) */
 .add-favourite-btn {

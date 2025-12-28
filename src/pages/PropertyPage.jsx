@@ -16,12 +16,13 @@ function PropertyPage({addFavourite}) {
 
   return (
     <div className="container">
+      <div className="details">
       <h2>{property.type}</h2>
       {/* PROPERTY IMAGE */}
       <img
-        src={`/${property.picture}`}
+        src={property.picture}
         alt="Property"
-        style={{ width: "100%", marginBottom: "15px" }}
+        className="property-image-2"
       />
 
       {/* BASIC INFO */}
@@ -66,8 +67,8 @@ function PropertyPage({addFavourite}) {
 
       <br /><br />
       <Link to="/">← Back to Search</Link>
-    </div>
-  );
+      </div>
+    </div>);
 }
 
 export default PropertyPage;
