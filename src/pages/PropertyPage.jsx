@@ -24,6 +24,11 @@ function PropertyPage({addFavourite}) {
         alt="Property"
         className="property-image-2"
       />
+<div className="thumbnail-grid">
+    {property.Images.map((img, index) => (
+      <img key={index} src={img} alt={`Property ${index + 1}`} />
+    ))}
+  </div>
 
       {/* BASIC INFO */}
       <p><strong>Location:</strong> {property.location}</p>
@@ -49,7 +54,7 @@ function PropertyPage({addFavourite}) {
     <img
       src={property.floorplan}
       alt="Floor Plan"
-      style={{ width: "100%" }}
+      style={{ width: "60%" }}
     />
   </TabPanel>
 
