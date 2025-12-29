@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 
-function FavouritePage({favourites= [], RemoveFavourite}) {
+function FavouritePage({favourites= [], RemoveFavourite , clearFavourites}) {
   return (
     <div className="container">
-        <div className="page-header">
+      <div className="page-header">
           <h2>Favourite Properties</h2>
-      
-        </div>
+      </div>
         <div className="favourites-container"> 
             {favourites.length === 0 && (
                 <p>You have no favourite properties.</p>)}
@@ -28,12 +27,15 @@ function FavouritePage({favourites= [], RemoveFavourite}) {
                             Remove from Favourites
                         </button>
                     </div>
-
              ))}
-       
-            <Link to="/SearchPage">← Back to Search</Link>
-            
         </div>
+        {favourites.length > 0 && (
+        <button onClick={clearFavourites} className="add-favourite-btn">
+          Clear All Favourites
+        </button>
+      )}
+            <Link to="/SearchPage">← Back to Search</Link>
+        
       </div>
   );
 }

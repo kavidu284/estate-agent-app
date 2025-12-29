@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/properties.json";
 
-function SearchPage({ favourites = [], removeFavourite }) {
+function SearchPage({ favourites = [], removeFavourite , addFavourite }) {
 
  
 
@@ -118,11 +118,14 @@ function SearchPage({ favourites = [], removeFavourite }) {
           <p>{property.location}</p>
           <p>Bedrooms: {property.bedrooms}</p>
           <p>£{property.price.toLocaleString()}</p>
+          <button className="add-favourite-btn" onClick={() => addFavourite(property)}>
+         Add to Favourites
+      </button>
+
 
           <Link to={`/property/${property.id}`}>
             View Details
           </Link>
-
         </div>
       ))}
 

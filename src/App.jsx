@@ -22,14 +22,18 @@ function App() {
     setFavourites(favourites.filter((fav) => fav.id !== id));
   };
 
+  const clearFavourites = () => {
+    setFavourites([]);
+  }
+
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<AllPropertyPage />} />
-        <Route path='/SearchPage' element={<SearchPage favourites={favourites} removeFavourite={RemoveFavourite}/>} />
+        <Route path="/" element={<AllPropertyPage addFavourite={addFavourite} />} />
+        <Route path='/SearchPage' element={<SearchPage favourites={favourites} addFavourite={addFavourite} removeFavourite={RemoveFavourite}/>} />
         <Route path="/property/:id" element={<PropertyPage addFavourite={addFavourite} />} />
-        <Route path="/favourites" element={<FavouritePage favourites={favourites} RemoveFavourite={RemoveFavourite} />} />
+        <Route path="/favourites" element={<FavouritePage favourites={favourites} RemoveFavourite={RemoveFavourite} clearFavourites={clearFavourites} />} />
         
       </Routes>
       <Footer />

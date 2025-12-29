@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import data from "../data/properties.json";
 
-function AllPropertyPage() {
+function AllPropertyPage({ addFavourite }) {
   return (
     <div className="container">
       <div className="page-header">
@@ -22,6 +21,10 @@ function AllPropertyPage() {
           <p>{property.location}</p>
           <p>Bedrooms: {property.bedrooms}</p>
           <p>£{property.price.toLocaleString()}</p>
+
+          <button className="add-favourite-btn" onClick={() => addFavourite(property)}>
+         Add to Favourites
+      </button>
 
           <Link to={`/property/${property.id}`}>
             View Details
