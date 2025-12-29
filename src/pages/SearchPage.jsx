@@ -33,18 +33,7 @@ function SearchPage({ favourites = [], removeFavourite }) {
       {/*header*/}
       <div className="page-header">
           <h2>Property Search</h2>
-          <div className="top-buttons">
-            <Link to="/" className="main-link">
-              View All Properties
-            </Link>
-            <Link to="/favourites" className="main-link">
-              View All favourites
-            </Link>
-          </div>
-
- 
-
-    </div>
+      </div>
 
     {/*filter options*/}
     <div className="filters">

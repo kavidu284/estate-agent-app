@@ -7,15 +7,6 @@ function AllPropertyPage() {
     <div className="container">
       <div className="page-header">
         <h2>All Properties</h2>
-        <div className="top-buttons">
-            <Link to="/SearchPage" className="main-link">
-              Go to Search Page
-            </Link>
-            <Link to="/favourites" className="main-link">
-              View All favourites
-            </Link>
-        </div>
-        
       </div>
 
       {/* ALL PROPERTIES LIST */}
