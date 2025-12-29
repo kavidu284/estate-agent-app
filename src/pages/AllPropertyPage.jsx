@@ -8,8 +8,8 @@ function AllPropertyPage() {
       <div className="page-header">
         <h2>All Properties</h2>
         <div className="top-buttons">
-            <Link to="/" className="main-link">
-              View All Properties
+            <Link to="/SearchPage" className="main-link">
+              Go to Search Page
             </Link>
             <Link to="/favourites" className="main-link">
               View All favourites
