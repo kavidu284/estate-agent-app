@@ -7,8 +7,8 @@ function Header() {
 
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/favourites">Favourites</Link>
         <Link to="/SearchPage">Search</Link>
+        <Link to="/favourites">Favourites</Link>
       </nav>
     </header>
   );
