@@ -34,7 +34,7 @@ function FavouritePage({favourites= [], RemoveFavourite , clearFavourites}) {
           Clear All Favourites
         </button>
       )}
-            <Link to="/SearchPage">← Back to Search</Link>
+            <Link to="/SearchPage" className="back-link">← Back to Search</Link>
         
       </div>
   );

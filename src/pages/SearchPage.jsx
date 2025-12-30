@@ -101,7 +101,7 @@ function SearchPage({ favourites = [], removeFavourite , addFavourite }) {
           </div>
         ))}
 
-        <Link to="/favourites">View All Favourites</Link>
+        <Link to="/favourites" className="back-link">View All Favourites</Link>
       </div>
       )}
       {/*search results*/}

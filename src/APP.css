@@ -16,6 +16,7 @@ body {
 /* CONTAINER */
 .container {
   max-width: auto;
+  height: 100%;
   margin:  auto;
   padding: 25px;
   background: white;
@@ -122,7 +123,7 @@ input:focus, select:focus {
   object-fit: cover;
 }
 /* BUTTONS & LINKS */
-a {
+.property-card a , .view-btn , .favourite-view-btn , .back-link {
   display: inline-block;
   margin-top: 12px;
   text-decoration: none;
@@ -134,7 +135,7 @@ a {
   transition: background 0.25s , transform 0.2s;
 }
 
-a:hover {
+.property-card a:hover , .view-btn:hover , .favourite-view-btn:hover , .back-link:hover {
     background: linear-gradient(to right, #2980b9, #1f6391);
     transform: translateY(-1px);
 }
@@ -298,17 +299,100 @@ position: absolute;
 .header nav a:hover {
   text-decoration: underline;
 }
-
-/* FOOTER */
-.footer {
-  background-color: rgb(2, 114, 184);
+.nav-link {
   color: white;
-  text-align: center;
-  padding: 12px;
-  margin-top: 30px;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #ffdd57;
+}
+
+/* Active (clicked) page */
+.nav-link.active {
+  color: #ffdd57;
+  border-bottom: 2px solid #ffdd57;
 }
 
 
+/* FOOTER */
+.footer {
+  background-color: #1f2933;
+  color: #e5e7eb;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+.footer-section ul li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  font-size: 14px;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #60a5fa;
+}
+
+/* Social icons */
+.social-icons a {
+  font-size: 20px;
+  margin-right: 12px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid #374151;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #9ca3af;
+}
 /* RESPONSIVE DESIGN */
 
 /* TABLET (max-width: 900px) */
@@ -331,6 +415,9 @@ position: absolute;
   .filters input,
   .filters select {
     width: 100%;
+  }
+  .thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -357,4 +444,21 @@ position: absolute;
     width: 100%;
     text-align: center;
   }
+    .thumbnail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .property-image-2 {
+    height: 260px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
 }
+
+
