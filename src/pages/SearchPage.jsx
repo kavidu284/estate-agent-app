@@ -15,85 +15,142 @@ function SearchPage({
   const [maxPrice, setMaxPrice] = useState("");
   const [dateAdded, setDateAdded] = useState("");
   const [postcode, setPostcode] = useState("");
+const [hasSearched, setHasSearched] = useState(false);
 
-  const filteredProperties = data.properties.filter((property) =>{
-    const matchesSearch = searchResults ==="Any" || property.type === searchResults;
-    const matchesBedrooms = minBedrooms === "" || property.bedrooms >= Number(minBedrooms);
-    const matchesmaxBedrooms = maxBedrooms === "" || property.bedrooms <= Number(maxBedrooms);
-    const matchesminPrice = minPrice === "" || property.price >= Number(minPrice);
-    const matchesmaxPrice = maxPrice === "" || property.price <= Number(maxPrice); 
-    const propertyDate = new Date(
-  `${property.added.month} ${property.added.day}, ${property.added.year}`);
-    const matchesDateAdded = dateAdded === "" || propertyDate >= new Date(dateAdded); 
-    const matchesPostcode = postcode === "" || property.location.toLowerCase().includes(postcode.toLowerCase());
+ const filteredProperties = hasSearched ? data.properties.filter((property) => {
+      const matchesSearch =
+        searchResults === "Any" || property.type === searchResults;
 
-  return matchesSearch && matchesBedrooms && matchesmaxBedrooms && matchesminPrice && matchesmaxPrice && matchesDateAdded && matchesPostcode;
-  });
+      const matchesBedrooms =
+        minBedrooms === "" || property.bedrooms >= Number(minBedrooms);
+
+      const matchesMaxBedrooms =
+        maxBedrooms === "" || property.bedrooms <= Number(maxBedrooms);
+
+      const matchesMinPrice =
+        minPrice === "" || property.price >= Number(minPrice);
+
+      const matchesMaxPrice =
+        maxPrice === "" || property.price <= Number(maxPrice);
+
+      const propertyDate = new Date(
+        `${property.added.month} ${property.added.day}, ${property.added.year}`
+      );
+
+      const matchesDateAdded =
+        dateAdded === "" || propertyDate >= new Date(dateAdded);
+
+      const matchesPostcode =
+        postcode === "" ||
+        property.location.toLowerCase().includes(postcode.toLowerCase());
+
+      return (
+        matchesSearch &&
+        matchesBedrooms &&
+        matchesMaxBedrooms &&
+        matchesMinPrice &&
+        matchesMaxPrice &&
+        matchesDateAdded &&
+        matchesPostcode
+      );
+    })
+  : [];
+  const handleReset = () => {
+  setSearchResults("Any");
+  setMinBedrooms("");
+  setMaxBedrooms("");
+  setMinPrice("");
+  setMaxPrice("");
+  setDateAdded("");
+  setPostcode("");
+  setHasSearched(false); // hide results again
+};
+
+
 
   return (
     <div className="container">
-      {/*header*/}
-      <div className="page-header">
-          <h2>Property Search</h2>
+        {/*header*/}
+        <div className="page-header">
+            <h2>Property Search</h2>
+        </div>
+
+      {/*filter options*/}
+       <div className="search-card">
+        <div className="filters">
+        <select value = {searchResults} onChange={(e) => setSearchResults(e.target.value)}>
+          <option value={"Any"}>Any</option>
+          <option value={"House"}>House</option>
+          <option value={"Flat"}>Flat</option>
+
+        </select>
+        <input
+          type="number"
+          placeholder="Min Bedrooms"  
+          value={minBedrooms}
+          onChange={(e) => setMinBedrooms(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Max Bedrooms"
+          value={maxBedrooms}
+          onChange={(e) => setMaxBedrooms(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Min Price"
+          value={minPrice}
+          onChange={(e) => setMinPrice(e.target.value)}
+          />
+        <input
+          type="number"
+          placeholder="Max Price"
+          value={maxPrice}
+          onChange={(e) => setMaxPrice(e.target.value)}
+        /> 
+        <input
+          type="date"
+          value={dateAdded}
+          onChange={(e) => setDateAdded(e.target.value)}          
+        />
+        <input
+          type="text"
+          placeholder="Postcode (e.g. BR5)"
+          value={postcode}
+          onChange={(e) => setPostcode(e.target.value)}          
+        />
+        <div className="filter-actions">
+          <button
+            className="search-btn"
+            onClick={() => setHasSearched(true)}
+          >
+            Search
+          </button>
+
+          <button
+            className="reset-btn"
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        </div>
       </div>
-
-    {/*filter options*/}
-    <div className="filters">
-    <select value = {searchResults} onChange={(e) => setSearchResults(e.target.value)}>
-      <option value={"Any"}>Any</option>
-      <option value={"House"}>House</option>
-      <option value={"Flat"}>Flat</option>
-
-    </select>
-    <input
-      type="number"
-      placeholder="Min Bedrooms"  
-      value={minBedrooms}
-      onChange={(e) => setMinBedrooms(e.target.value)}
-    />
-    <input
-      type="number"
-      placeholder="Max Bedrooms"
-      value={maxBedrooms}
-      onChange={(e) => setMaxBedrooms(e.target.value)}
-    />
-    <input
-      type="number"
-      placeholder="Min Price"
-      value={minPrice}
-      onChange={(e) => setMinPrice(e.target.value)}
-      />
-    <input
-      type="number"
-      placeholder="Max Price"
-      value={maxPrice}
-      onChange={(e) => setMaxPrice(e.target.value)}
-    /> 
-    <input
-      type="date"
-      value={dateAdded}
-      onChange={(e) => setDateAdded(e.target.value)}          
-    />
-    <input
-      type="text"
-      placeholder="Postcode (e.g. BR5)"
-      value={postcode}
-      onChange={(e) => setPostcode(e.target.value)}          
-    />
     </div> 
     <hr />
       {/* ⭐ FAVOURITES PREVIEW  */}
     {favourites.length > 0 && (
       <div className="favourites-preview">
-        <h3>❤️ Favourite Properties ({favourites.length})</h3>
+         <h3 className="favourites-title">❤️ Favourite Properties ({favourites.length})</h3>
 
         {favourites.map((property) => (
           <div key={property.id} className="favourite-mini-card">
-            <p>
-              <strong>{property.type}</strong> – {property.location}
-            </p>
-            <p>£{property.price.toLocaleString()}</p>
+            <div className="fav-info">
+              <p className="fav-type">
 
+                <strong>{property.type}</strong> – {property.location}
+              </p>
+              <p className="fav-price">£{property.price.toLocaleString()}</p>
+            </div>
             <button
               onClick={() => removeFavourite(property.id)}
               className="remove-fav-btn"
@@ -103,7 +160,7 @@ function SearchPage({
           </div>
         ))}
 
-        <Link to="/favourites" className="back-link">View All Favourites</Link>
+        <Link to="/favourites" className="view-all-favs-btn">View All Favourites</Link>
       </div>
       )}
       {/*search results*/}
@@ -120,19 +177,23 @@ function SearchPage({
           <p>{property.location}</p>
           <p>Bedrooms: {property.bedrooms}</p>
           <p>£{property.price.toLocaleString()}</p>
-          <button className="add-favourite-btn" onClick={() => addFavourite(property)}>
-         Add to Favourites
-      </button>
+          
+              <button className="add-favourite-btn" onClick={() => addFavourite(property)}>
+                       Add to Favourites
+              </button>
 
-
-          <Link to={`/property/${property.id}`}>
-            View Details
-          </Link>
+              <Link  className="details-btn" to={`/property/${property.id}`}>
+                View Details
+              </Link>
+            
         </div>
       ))}
 
       {filteredProperties.length === 0 && (
-        <p>No properties match your search.</p>
+        <p className="empty-state">
+  Try adjusting your filters to see more properties.
+</p>
+
       )}
       
     </div>

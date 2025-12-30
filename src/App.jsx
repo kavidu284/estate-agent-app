@@ -28,7 +28,9 @@ function App() {
 
   return (
     <BrowserRouter>
+    <div className='app-layout'>
       <Header />
+      <main className="main-content">
       <Routes>
         <Route path="/" element={<AllPropertyPage addFavourite={addFavourite} />} />
         <Route path='/SearchPage' element={<SearchPage favourites={favourites} addFavourite={addFavourite} removeFavourite={RemoveFavourite}/>} />
@@ -36,7 +38,10 @@ function App() {
         <Route path="/favourites" element={<FavouritePage favourites={favourites} RemoveFavourite={RemoveFavourite} clearFavourites={clearFavourites} />} />
         
       </Routes>
+      </main>
+      
       <Footer />
+      </div>
     </BrowserRouter>
   );
 }

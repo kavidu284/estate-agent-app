@@ -23,10 +23,10 @@ function AllPropertyPage({ addFavourite }) {
           <p>£{property.price.toLocaleString()}</p>
 
           <button className="add-favourite-btn" onClick={() => addFavourite(property)}>
-         Add to Favourites
-      </button>
+                   Add to Favourites
+          </button>
 
-          <Link to={`/property/${property.id}`}>
+          <Link className="details-btn" to={`/property/${property.id}`}>
             View Details
           </Link>
         </div>

@@ -2,14 +2,25 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="header">
-      <h1>Estate Agent</h1>
+    <header className="navbar">
+      <div className="navbar-container">
+        <div className="brand">
+          <span className="brand-icon">🏠</span>
+          <span className="brand-name">EstateAgent</span>
+        </div>
 
-      <nav>
-        <NavLink to="/" className="nav-link">Property page</NavLink>
-        <NavLink to="/SearchPage" className="nav-link">Search</NavLink>
-        <NavLink to="/favourites" className="nav-link">Favourites</NavLink>
-      </nav>
+        <nav className="nav-menu">
+          <NavLink to="/" className="nav-item">
+            Properties
+          </NavLink>
+          <NavLink to="/SearchPage" className="nav-item">
+            Search
+          </NavLink>
+          <NavLink to="/favourites" className="nav-item">
+            Favourites
+          </NavLink>
+        </nav>
+      </div>
     </header>
   );
 }
