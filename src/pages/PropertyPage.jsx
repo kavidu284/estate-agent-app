@@ -81,7 +81,7 @@ function PropertyPage({addFavourite}) {
       <br /><br />
       <Link to="/SearchPage" className="back-link">← Back to Search</Link>
       <br />
-      <Link to="/" className="back-link">← Back to All Property</Link>
+      <Link to="/properties" className="back-link">← Back to All Property</Link>
       </div>
     </div>);
 }

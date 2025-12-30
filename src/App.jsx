@@ -4,6 +4,7 @@ import PropertyPage  from './pages/PropertyPage';
 import SearchPage from './pages/SearchPage';
 import FavouritePage from './pages/FavouritePage';
 import AllPropertyPage from './pages/AllPropertyPage';
+import HomePage from './pages/HomePage';
 import Header from './components/header';
 import Footer from './components/Footer';
 
@@ -32,14 +33,16 @@ function App() {
       <Header />
       <main className="main-content">
       <Routes>
-        <Route path="/" element={<AllPropertyPage addFavourite={addFavourite} />} />
+
+        <Route path="/" element={<HomePage />} />
+        <Route path="/properties" element={<AllPropertyPage addFavourite={addFavourite} />} />
         <Route path='/SearchPage' element={<SearchPage favourites={favourites} addFavourite={addFavourite} removeFavourite={RemoveFavourite}/>} />
         <Route path="/property/:id" element={<PropertyPage addFavourite={addFavourite} />} />
         <Route path="/favourites" element={<FavouritePage favourites={favourites} RemoveFavourite={RemoveFavourite} clearFavourites={clearFavourites} />} />
         
       </Routes>
       </main>
-      
+
       <Footer />
       </div>
     </BrowserRouter>

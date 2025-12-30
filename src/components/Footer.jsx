@@ -6,11 +6,11 @@ function Footer() {
       <div className="footer-container">
 
         {/* Left Section */}
-        <div className="footer-section">
+        <div className="footer-section brand-section">
           <h3>Estate Agent App</h3>
           <p>
-            A modern property listing platform , designed
-            for efficient searching and property management.
+             A modern property listing platform designed for
+            smart searching and effortless property management.
           </p>
         </div>
 
@@ -18,9 +18,10 @@ function Footer() {
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><Link to="/">All Properties</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/SearchPage">Search</Link></li>
             <li><Link to="/favourites">Favourites</Link></li>
+            <li><Link to="/properties">Properties</Link></li>
           </ul>
         </div>
 
@@ -34,7 +35,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        ©  Estate Agent App. All rights reserved.
+        © {new Date().getFullYear()} EstateAgent.All rights reserved.
       </div>
     </footer>
   );
