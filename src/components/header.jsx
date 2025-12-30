@@ -6,7 +6,7 @@ function Header() {
       <h1>Estate Agent</h1>
 
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/">Property page</Link>
         <Link to="/SearchPage">Search</Link>
         <Link to="/favourites">Favourites</Link>
       </nav>
