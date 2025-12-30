@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/properties.json";
 
-function SearchPage({ favourites = [], removeFavourite , addFavourite }) {
-
- 
+function SearchPage({
+  favourites = [],
+  removeFavourite = () => {},
+  addFavourite = () => {}
+}) {
 
   const [searchResults, setSearchResults] = useState("Any");
   const [minBedrooms, setMinBedrooms] = useState("");
