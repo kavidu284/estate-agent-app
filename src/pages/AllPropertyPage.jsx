@@ -44,7 +44,7 @@ function AllPropertyPage({ addFavourite  , favourites , removeFavourite  }) {
         ) : (
           favourites.map((fav) => (
             <div key={fav.id} className="favourite-mini-card">
-              <img src={fav.picture} alt="" />
+              <img src={fav.picture} alt="Property image" />
               <div>
                 <p className="fav-title">{fav.type}</p>
                 <p className="fav-price">
