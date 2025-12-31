@@ -22,6 +22,8 @@ function Footer() {
             <li><Link to="/SearchPage">Search</Link></li>
             <li><Link to="/favourites">Favourites</Link></li>
             <li><Link to="/properties">Properties</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+
           </ul>
         </div>
 

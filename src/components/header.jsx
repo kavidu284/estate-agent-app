@@ -19,6 +19,10 @@ function Header() {
           <NavLink to="/favourites" className="nav-item">
             Favourites
           </NavLink>
+          <NavLink to="/contact" className="nav-item">
+            Contact
+          </NavLink>
+
         </nav>
       </div>
     </header>

@@ -7,6 +7,7 @@ import AllPropertyPage from './pages/AllPropertyPage';
 import HomePage from './pages/HomePage';
 import Header from './components/header';
 import Footer from './components/Footer';
+import ContactPage from './pages/contact';
 
 import './App.css';
 
@@ -39,7 +40,8 @@ function App() {
         <Route path='/SearchPage' element={<SearchPage favourites={favourites} addFavourite={addFavourite} removeFavourite={RemoveFavourite}/>} />
         <Route path="/property/:id" element={<PropertyPage addFavourite={addFavourite} />} />
         <Route path="/favourites" element={<FavouritePage favourites={favourites} RemoveFavourite={RemoveFavourite} clearFavourites={clearFavourites} />} />
-        
+        <Route path="/contact" element={<ContactPage />} />
+
       </Routes>
       </main>
 
