@@ -264,7 +264,7 @@ h3 {
   object-fit: cover;
 }
 /* BUTTONS & LINKS */
-.property-card a , .favourite-view-btn {
+.favourite-view-btn {
   display: inline-block;
   margin-top: 12px;
   text-decoration: none;
@@ -276,7 +276,7 @@ h3 {
   transition: background 0.25s , transform 0.2s;
 }
 
-.property-card a:hover  , .favourite-view-btn:hover , .back-link:hover {
+.favourite-view-btn:hover {
     background: linear-gradient(to right, #2980b9, #1f6391);
     transform: translateY(-1px);
 }
