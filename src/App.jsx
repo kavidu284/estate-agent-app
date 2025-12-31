@@ -38,7 +38,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/properties" element={<AllPropertyPage addFavourite={addFavourite} favourites={favourites} removeFavourite={RemoveFavourite}/>} />
         <Route path='/SearchPage' element={<SearchPage favourites={favourites} addFavourite={addFavourite} removeFavourite={RemoveFavourite}/>} />
-        <Route path="/property/:id" element={<PropertyPage addFavourite={addFavourite} />} />
+        <Route path="/property/:id" element={<PropertyPage addFavourite={addFavourite} favourites ={ favourites} removeFavourite= {RemoveFavourite}  />} />
         <Route path="/favourites" element={<FavouritePage favourites={favourites} RemoveFavourite={RemoveFavourite} clearFavourites={clearFavourites} />} />
         <Route path="/contact" element={<ContactPage />} />
 
