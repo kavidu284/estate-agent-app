@@ -16,20 +16,22 @@ function AllPropertyPage({ addFavourite }) {
             alt="Property"
             className="property-image"
           />
+          <div className="property-info">
+            <h3>{property.type}</h3>
+            <p className="property-location">{property.location}</p>
+            <p className="property-meta">Bedrooms: {property.bedrooms}</p>
+            <p  className="property-price">£{property.price.toLocaleString()}</p>
+          </div>
+          <div className="property-actions">
+            <button className="add-favourite-btn" onClick={() => addFavourite(property)}>
+                    Add to Favourites
+            </button>
 
-          <h3>{property.type}</h3>
-          <p>{property.location}</p>
-          <p>Bedrooms: {property.bedrooms}</p>
-          <p>£{property.price.toLocaleString()}</p>
-
-          <button className="add-favourite-btn" onClick={() => addFavourite(property)}>
-                   Add to Favourites
-          </button>
-
-          <Link className="details-btn" to={`/property/${property.id}`}>
-            View Details
-          </Link>
-        </div>
+            <Link className="details-btn" to={`/property/${property.id}`}>
+              View Details
+            </Link>
+          </div>
+        </div>    
       ))}
     </div>
   );

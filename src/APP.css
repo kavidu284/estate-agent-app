@@ -263,6 +263,27 @@ h3 {
   height: 180px;
   object-fit: cover;
 }
+.property-info {
+  padding: 16px;
+}
+
+.property-location {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.property-meta {
+  font-size: 14px;
+  color: #475569;
+}
+
+.property-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-top: 6px;
+}
+
 /* BUTTONS & LINKS */
 .favourite-view-btn {
   display: inline-block;
