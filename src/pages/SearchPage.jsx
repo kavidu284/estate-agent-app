@@ -138,31 +138,45 @@ const [hasSearched, setHasSearched] = useState(false);
     </div> 
     <hr />
       {/* ⭐ FAVOURITES PREVIEW  */}
-    {favourites.length > 0 && (
       <div className="favourites-preview">
-         <h3 className="favourites-title">❤️ Favourite Properties ({favourites.length})</h3>
+  <h3 className="favourites-title">
+    ❤️ Favourite Properties
+    {favourites.length > 0 && ` (${favourites.length})`}
+  </h3>
 
-        {favourites.map((property) => (
-          <div key={property.id} className="favourite-mini-card">
-            <div className="fav-info">
-              <p className="fav-type">
-
-                <strong>{property.type}</strong> – {property.location}
-              </p>
-              <p className="fav-price">£{property.price.toLocaleString()}</p>
-            </div>
-            <button
-              onClick={() => removeFavourite(property.id)}
-              className="remove-fav-btn"
-            >
-              Remove
-            </button>
+  {favourites.length === 0 ? (
+    <p className="empty-state">
+      No favourites yet. Add properties to see them here.
+    </p>
+  ) : (
+    <>
+      {favourites.map((property) => (
+        <div key={property.id} className="favourite-mini-card">
+          <div className="fav-info">
+            <p className="fav-type">
+              <strong>{property.type}</strong> – {property.location}
+            </p>
+            <p className="fav-price">
+              £{property.price.toLocaleString()}
+            </p>
           </div>
-        ))}
 
-        <Link to="/favourites" className="view-all-favs-btn">View All Favourites</Link>
-      </div>
-      )}
+          <button
+            onClick={() => removeFavourite(property.id)}
+            className="remove-fav-btn"
+          >
+            Remove
+          </button>
+        </div>
+      ))}
+
+      <Link to="/favourites" className="view-all-favs-btn">
+        View All Favourites
+      </Link>
+    </>
+  )}
+</div>
+
       {/*search results*/}
       {filteredProperties.map((property) => (
         <div key={property.id} className="property-card">

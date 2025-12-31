@@ -283,6 +283,79 @@ h3 {
   color: #2563eb;
   margin-top: 6px;
 }
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* LEFT */
+.properties-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* RIGHT PANEL */
+.favourites-panel {
+  position: sticky;
+  top: 100px;
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 16px;
+  height: fit-content;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.favourites-panel h3 {
+  margin-bottom: 12px;
+}
+
+.empty-fav {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* MINI FAV CARD */
+.favourite-mini-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.favourite-mini-card img {
+  width: 60px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.fav-title {
+  font-weight: 600;
+}
+
+.fav-price {
+  font-size: 14px;
+  color: #2563eb;
+}
+
+.remove-fav-btn {
+  margin-left: auto;
+  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.remove-fav-btn:hover {
+  background: #dc2626;
+}
 
 /* BUTTONS & LINKS */
 .favourite-view-btn {
