@@ -15,7 +15,7 @@ function FavouritePage({favourites= [], RemoveFavourite , clearFavourites}) {
                   <div className="favourite-card" key={property.id} >
                        <Link to={`/property/${property.id}`}className="favourite-view-btn" > View Details </Link>
                         <img
-                            src={`${import.meta.env.BASE_URL}${property.picture}`}
+                            src={property.picture}
                             alt="Property"
                             className="favourite-property-image"
                         />

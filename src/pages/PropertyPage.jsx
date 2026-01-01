@@ -26,13 +26,13 @@ function PropertyPage({addFavourite}) {
         </div>
         {/* PROPERTY IMAGE */}
         <img
-          src={`${import.meta.env.BASE_URL}${property.picture}`}
+          src={property.picture}
           alt="Property"
           className="property-image-2"
         />
         <div className="thumbnail-grid">
           {property.Images.map((img, index) => (
-            <img key={index} src={`${import.meta.env.BASE_URL}${img}`} alt={`Property ${index + 1}`} />
+            <img key={index} src={img} alt={`Property ${index + 1}`} />
           ))}
         </div>
 
@@ -57,7 +57,7 @@ function PropertyPage({addFavourite}) {
 
           <TabPanel>
             <img
-              src={`${import.meta.env.BASE_URL}${property.floorplan}`}
+              src={property.floorplan}
               alt="Floor Plan"
               className="floorplan-img"
             />

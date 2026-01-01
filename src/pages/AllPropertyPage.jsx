@@ -13,7 +13,7 @@ function AllPropertyPage({ addFavourite  , favourites , removeFavourite  }) {
         {data.properties.map((property) => (
           <div key={property.id} className="property-card">
             <img
-              src={`${import.meta.env.BASE_URL}${property.picture}`}
+              src={property.picture}
               alt="Property"
               className="property-image"
             />
@@ -44,7 +44,7 @@ function AllPropertyPage({ addFavourite  , favourites , removeFavourite  }) {
         ) : (
           favourites.map((fav) => (
             <div key={fav.id} className="favourite-mini-card">
-              <img src={`${import.meta.env.BASE_URL}${fav.picture}`} alt="Property image" />
+              <img src={fav.picture} alt="Property image" />
               <div>
                 <p className="fav-title">{fav.type}</p>
                 <p className="fav-price">
