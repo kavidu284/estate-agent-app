@@ -1030,5 +1030,18 @@ position: absolute;
    .contact-layout {
     grid-template-columns: 1fr;
   }
+  .two-column-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .favourites-panel {
+    position: static;       
+    margin-top: 20px;
+  }
+
+  .favourite-mini-card {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
