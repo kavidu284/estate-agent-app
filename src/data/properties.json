@@ -8,7 +8,7 @@
 			"tenure":"Freehold",
 			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
 			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
-			"picture":"/Images/prop1.jpg",
+			"picture":"Images/prop1.jpg",
 			"url":"properties/prop1.html",
             "added": {
                 "month":"October",
@@ -16,14 +16,14 @@
                 "year":2022
             },
       "Images": [
-        "/Images/Prop-1-1.jpg",
-        "/Images/Prop-1-2.jpg",
-        "/Images/Prop-1-3.jpg" ,   
-        "/Images/Prop-1-4.jpg",
-        "/Images/Prop-1-5.jpg",
-        "/Images/Prop-1-6.jpg"
+        "Images/Prop-1-1.jpg",
+        "Images/Prop-1-2.jpg",
+        "Images/Prop-1-3.jpg" ,   
+        "Images/Prop-1-4.jpg",
+        "Images/Prop-1-5.jpg",
+        "Images/Prop-1-6.jpg"
       ],
-      "floorplan": "/Images/floorplan1.png"
+      "floorplan": "Images/floorplan1.png"
         },
 		{
       "id":"prop2",
@@ -33,7 +33,7 @@
 			"tenure":"Freehold",
 			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
 			"location":"Crofton Road Orpington BR6",
-			"picture":"/Images/prop2.jpg",
+			"picture":"Images/prop2.jpg",
 			"url":"properties/prop2.html",
             "added": {
                 "month":"September",
@@ -41,14 +41,14 @@
                 "year":2022
             },
       "Images": [
-        "/Images/Prop-2-1.jpg",
-        "/Images/Prop-2-2.jpg",
-        "/Images/Prop-2-3.jpg",
-        "/Images/Prop-2-4.jpg",
-        "/Images/Prop-2-5.jpg",
-        "/Images/Prop-2-6.jpg"
+        "Images/Prop-2-1.jpg",
+        "Images/Prop-2-2.jpg",
+        "Images/Prop-2-3.jpg",
+        "Images/Prop-2-4.jpg",
+        "Images/Prop-2-5.jpg",
+        "Images/Prop-2-6.jpg"
       ], 
-      "floorplan": "/Images/floorplan2.png"
+      "floorplan": "Images/floorplan2.png"
         },
         {
       "id": "prop3",
@@ -57,19 +57,19 @@
       "price": 420000,
       "tenure": "Freehold",
       "location": "Reading Road  , Wokingham BR7",
-      "picture": "/Images/prop3.jpg",
+      "picture": "Images/prop3.jpg",
       "url": "properties/prop3.html",
       "description": "Spacious three bedroom detached bungalow situated in a quiet residential location. The property offers a large living room, fitted kitchen, modern bathroom and private rear garden. Additional features include driveway parking, a garage and convenient access to local shops and schools.",
       "added": { "month": "March", "day": 18, "year": 2025 },
       "Images": [
-        "/Images/Prop-3-1.jpg",
-        "/Images/Prop-3-2.jpg",
-        "/Images/Prop-3-3.jpg" ,
-        "/Images/Prop-3-4.jpg",
-        "/Images/Prop-3-5.jpg",
-        "/Images/Prop-3-6.jpg"
+        "Images/Prop-3-1.jpg",
+        "Images/Prop-3-2.jpg",
+        "Images/Prop-3-3.jpg" ,
+        "Images/Prop-3-4.jpg",
+        "Images/Prop-3-5.jpg",
+        "Images/Prop-3-6.jpg"
       ], 
-      "floorplan": "/Images/floorplan3.png"
+      "floorplan": "Images/floorplan3.png"
       
     },
     {
@@ -79,19 +79,19 @@
       "price": 780000,
       "tenure": "Freehold",
       "location": "Bromley Road, Bromley BR1",
-      "picture": "/Images/prop4.jpg",
+      "picture": "Images/prop4.jpg",
       "url": "properties/prop4.html",
       "description": "Impressive five bedroom detached family home offering generous living accommodation throughout. The property features multiple reception rooms, a modern fitted kitchen, utility room and landscaped garden. The first floor includes five bedrooms with a master en-suite and a family bathroom.",
       "added": { "month": "June", "day": 9, "year": 2023 },
       "Images": [
-        "/Images/Prop-4-1.jpg",
-        "/Images/Prop-4-2.jpg",
-        "/Images/Prop-4-3.jpg" ,
-        "/Images/Prop-4-4.jpg",
-        "/Images/Prop-4-5.jpg",
-        "/Images/Prop-4-6.jpg"
+        "Images/Prop-4-1.jpg",
+        "Images/Prop-4-2.jpg",
+        "Images/Prop-4-3.jpg" ,
+        "Images/Prop-4-4.jpg",
+        "Images/Prop-4-5.jpg",
+        "Images/Prop-4-6.jpg"
       ], 
-      "floorplan": "/Images/floorplan4.png"
+      "floorplan": "Images/floorplan4.png"
     },
     {
       "id": "prop5",
@@ -100,19 +100,19 @@
       "price": 450000,
       "tenure": "Leasehold",
       "location": "Canary Wharf, London BR3",
-      "picture": "/Images/prop5.jpg",
+      "picture": "Images/prop5.jpg",
       "url": "properties/prop5.html",
       "description": "Stylish one bedroom apartment located in the heart of Canary Wharf offering river views and excellent transport connections. The property benefits from an open-plan living space, modern kitchen, secure entry system and access to on-site gym facilities.",
       "added": { "month": "August", "day": 21, "year": 2023 },
       "Images": [
-        "/Images/Prop-5-1.jpg",
-        "/Images/Prop-5-2.jpg",
-        "/Images/Prop-5-3.jpg" ,
-        "/Images/Prop-5-4.jpg",
-        "/Images/Prop-5-5.jpg",
-        "/Images/Prop-5-6.jpg"
+        "Images/Prop-5-1.jpg",
+        "Images/Prop-5-2.jpg",
+        "Images/Prop-5-3.jpg" ,
+        "Images/Prop-5-4.jpg",
+        "Images/Prop-5-5.jpg",
+        "Images/Prop-5-6.jpg"
       ], 
-      "floorplan": "/Images/floorplan5.png"
+      "floorplan": "Images/floorplan5.png"
     },
     {
       "id": "prop6",
@@ -121,19 +121,19 @@
       "price": 560000,
       "tenure": "Freehold",
       "location": "Greenwich, London BR4",
-      "picture": "/Images/prop6.jpg",
+      "picture": "Images/prop6.jpg",
       "url": "properties/prop6.html",
       "description": "Well presented three bedroom terraced house within walking distance of Greenwich Park and local transport links. The property offers a bright living area, fitted kitchen, family bathroom and a private garden, making it ideal for families and professionals.",
       "added": { "month": "September", "day": 3, "year": 2023 },
       "Images": [
-        "/Images/Prop-6-1.jpg",
-        "/Images/Prop-6-2.jpg",
-        "/Images/Prop-6-3.jpg" ,
-        "/Images/Prop-6-4.jpg",
-        "/Images/Prop-6-5.jpg",
-        "/Images/Prop-6-6.jpg"
+        "Images/Prop-6-1.jpg",
+        "Images/Prop-6-2.jpg",
+        "Images/Prop-6-3.jpg" ,
+        "Images/Prop-6-4.jpg",
+        "Images/Prop-6-5.jpg",
+        "Images/Prop-6-6.jpg"
       ],
-      "floorplan": "/Images/floorplan6.png"
+      "floorplan": "Images/floorplan6.png"
     },
 
     {
@@ -143,18 +143,18 @@
       "price": 390000,
       "tenure": "Freehold",
       "location": "Kent Road, Maidstone BR2",
-      "picture": "/Images/prop7.jpg",
+      "picture": "Images/prop7.jpg",
       "url": "properties/prop7.html",
       "description": "Charming two bedroom bungalow located in a peaceful setting with easy access to nearby towns and countryside. The property features a comfortable living space, fitted kitchen, modern bathroom and a low-maintenance garden, ideal for downsizers.",
       "added": { "month": "November", "day": 14, "year": 2023 },
       "Images": [
-        "/Images/Prop-7-1.jpg",
-        "/Images/Prop-7-2.jpg",
-        "/Images/Prop-7-3.jpg" ,
-        "/Images/Prop-7-4.jpg",
-        "/Images/Prop-7-5.jpg",
-        "/Images/Prop-7-6.jpg"
+        "Images/Prop-7-1.jpg",
+        "Images/Prop-7-2.jpg",
+        "Images/Prop-7-3.jpg" ,
+        "Images/Prop-7-4.jpg",
+        "Images/Prop-7-5.jpg",
+        "Images/Prop-7-6.jpg"
       ],
-      "floorplan": "/Images/floorplan7.png"
+      "floorplan": "Images/floorplan7.png"
     }
 ]}
