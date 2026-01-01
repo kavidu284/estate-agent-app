@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import PropertyPage  from './pages/PropertyPage';
 import SearchPage from './pages/SearchPage';
@@ -29,7 +29,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <div className='app-layout'>
       <Header />
       <main className="main-content">
@@ -47,7 +47,7 @@ function App() {
 
       <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
