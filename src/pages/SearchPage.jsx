@@ -182,7 +182,7 @@ const [hasSearched, setHasSearched] = useState(false);
         <div key={property.id} className="property-card">
 
           <img
-            src={property.picture}
+            src={`${import.meta.env.BASE_URL}${property.picture}`}
             alt="Property"
             className="property-image"
           />
