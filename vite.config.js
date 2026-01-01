@@ -4,10 +4,11 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/estate-agent-app/',
   test: {
     globals: true,                 
     environment: "jsdom",           
     setupFiles: "./src/setupTests.js", 
-    base: '/estate-agent-app/',
+
 },
 })
