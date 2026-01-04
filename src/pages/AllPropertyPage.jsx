@@ -37,7 +37,7 @@ function AllPropertyPage({ addFavourite  , favourites , removeFavourite  }) {
       </div>
       {/*right column - favourites*/}
       <aside className="favourites-panel">
-        <h3>❤️ Favourites</h3>
+        <h3>❤️ Favourite</h3>
 
         {favourites.length === 0 ? (
           <p className="empty-fav">No favourite properties yet</p>
